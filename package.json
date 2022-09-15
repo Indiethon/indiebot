@@ -1,0 +1,23 @@
+{
+  "name": "indiebot",
+  "version": "1.0.0",
+  "description": "Indiethon's resident Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Indiethon/indiebot.git"
+  },
+  "author": "nicnacnic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Indiethon/indiebot/issues"
+  },
+  "homepage": "https://github.com/Indiethon/indiebot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.2.0",
+    "discord.js": "^14.3.0"
+  }
+}
