@@ -32,7 +32,7 @@ client.once('ready', async () => {
     }
 
     function commentator(interaction) {
-        if (!interaction.member.roles.cache.has(config.commentator.roleToHave) || !interaction.member.permissions.has(PermissionsBitField.Flags.ManageRoles) || !interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) return interaction.reply({ content: `You do not have permission to execute this command.`, ephemeral: true });
+        if (!interaction.member.roles.cache.has(config.commentator.roleToHave) && !interaction.member.permissions.has(PermissionsBitField.Flags.ManageRoles) && !interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) return interaction.reply({ content: `You do not have permission to execute this command.`, ephemeral: true });
         let role = interaction.guild.roles.cache.find(role => role.id === config.commentator.roleToGive);
         switch (interaction.options.getString('action')) {
             case 'add': addCommentator(); break;
